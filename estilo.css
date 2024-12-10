@@ -190,55 +190,49 @@ button:last-of-type:hover {
     .container {
         width: 90%;
         padding: 20px;
+        margin-bottom: 100px; /* Espaço para as seções de baixo */
     }
 
     #entradaLetra input, #palavraCompleta {
         width: 80%;
     }
 
-    /* Atualizando os lados (esquerdo e direito) para a parte inferior da tela */
+    /* Remover as seções de Letras Erradas e Palavras Descobertas da posição fixa */
     #ladoEsquerdo, #ladoDireito {
-        position: static;  /* Remover posição fixa */
-        width: 100%;  /* Para ocupar toda a largura */
-        margin-top: 20px; /* Adicionar espaço no topo */
-        box-shadow: none; /* Remover a sombra */
+        position: static;  /* Remover a posição fixa para que fique no fluxo normal da página */
+        width: 100%;  /* Ocupar toda a largura */
+        margin: 0; /* Remover margens */
         background: rgba(0, 0, 0, 0.6); /* Manter o fundo */
         color: #00bcd4;
-    }
-
-    /* Ajustar o estilo das letras erradas e palavras descobertas */
-    #ladoEsquerdo, #ladoDireito {
         padding: 15px;
-        text-align: center;
+        box-shadow: none; /* Remover sombra */
+        text-align: center; /* Centralizar o texto */
     }
 
-    /* Estilo do título das seções */
+    /* Ajustar a fonte e o espaçamento nas seções */
     #ladoEsquerdo h3, #ladoDireito h3 {
         font-size: 1.4rem;
         margin-bottom: 10px;
         color: #ff4081;  /* Neon rosa */
     }
 
-    /* Ajustando o conteúdo das letras erradas e palavras descobertas */
     #letrasErradas, #palavrasDescobertas {
         font-size: 1.2rem;
         color: #fff;
     }
 
-    /* Colocando as seções no rodapé */
-    #ladoEsquerdo, #ladoDireito {
-        position: relative; /* Relativo para colocá-las na parte inferior */
-        width: 100%;
-        margin-top: 10px;  /* Para espaçar um pouco */
-    }
-    
+    /* Colocar as seções no rodapé da página */
     #ladoEsquerdo {
-        margin-bottom: 10px; /* Espaço abaixo da seção de letras erradas */
+        margin-top: 20px; /* Adicionar um pouco de margem no topo */
     }
 
-    /* Adicionando uma borda inferior para uma separação visual */
+    #ladoDireito {
+        margin-top: 20px; /* Adicionar um pouco de margem no topo */
+    }
+
+    /* Adiciona um espaçamento abaixo para garantir que o conteúdo não fique preso ao fundo */
     #ladoEsquerdo, #ladoDireito {
-        border-top: 2px solid #00bcd4;  /* Borda para separar visualmente */
+        margin-bottom: 20px;
     }
 }
 
