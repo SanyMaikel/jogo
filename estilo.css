@@ -192,31 +192,53 @@ button:last-of-type:hover {
         padding: 20px;
     }
 
-    h1 {
-        font-size: 1.8rem;
-    }
-
     #entradaLetra input, #palavraCompleta {
-        width: 70%;
-        font-size: 1.4rem;
+        width: 80%;
     }
 
+    /* Atualizando os lados (esquerdo e direito) para a parte inferior da tela */
     #ladoEsquerdo, #ladoDireito {
-        width: 160px;
+        position: static;  /* Remover posição fixa */
+        width: 100%;  /* Para ocupar toda a largura */
+        margin-top: 20px; /* Adicionar espaço no topo */
+        box-shadow: none; /* Remover a sombra */
+        background: rgba(0, 0, 0, 0.6); /* Manter o fundo */
+        color: #00bcd4;
     }
 
-    button {
-        width: 100%;
-        font-size: 1.2rem;
+    /* Ajustar o estilo das letras erradas e palavras descobertas */
+    #ladoEsquerdo, #ladoDireito {
         padding: 15px;
+        text-align: center;
     }
 
-    #entradaLetra input, #palavraCompleta {
+    /* Estilo do título das seções */
+    #ladoEsquerdo h3, #ladoDireito h3 {
         font-size: 1.4rem;
-        padding: 12px;
+        margin-bottom: 10px;
+        color: #ff4081;  /* Neon rosa */
     }
 
-    #tentativasFeitas {
-        font-size: 1rem;
+    /* Ajustando o conteúdo das letras erradas e palavras descobertas */
+    #letrasErradas, #palavrasDescobertas {
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    /* Colocando as seções no rodapé */
+    #ladoEsquerdo, #ladoDireito {
+        position: relative; /* Relativo para colocá-las na parte inferior */
+        width: 100%;
+        margin-top: 10px;  /* Para espaçar um pouco */
+    }
+    
+    #ladoEsquerdo {
+        margin-bottom: 10px; /* Espaço abaixo da seção de letras erradas */
+    }
+
+    /* Adicionando uma borda inferior para uma separação visual */
+    #ladoEsquerdo, #ladoDireito {
+        border-top: 2px solid #00bcd4;  /* Borda para separar visualmente */
     }
 }
+
