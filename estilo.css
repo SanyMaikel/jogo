@@ -194,5 +194,22 @@ button:active {
     }
 }
 
+/* Ajuste para telas grandes (desktop) */
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        flex-direction: column;
+        min-height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
+    }
+
+    .container {
+        max-width: 700px; /* Limita a largura para uma experiência mais agradável em telas grandes */
+        width: 80%; /* Mantém o conteúdo com uma largura mais flexível */
+    }
+}
+
+
 
 
