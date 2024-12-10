@@ -10,12 +10,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #2c3e50, #34495e); /* Fundo futurista escuro */
     color: #fff;
-    min-height: 100vh;
+    min-height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinha o conteúdo no topo da página */
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: auto; /* Permite rolar a página verticalmente */
+    padding-bottom: 100px; /* Deixa espaço para as seções do rodapé */
 }
 
 /* Container principal */
@@ -139,25 +140,14 @@ button:active {
 
 /* Estilo do painel de letras erradas e palavras descobertas */
 #ladoEsquerdo, #ladoDireito {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;  /* Remover o fixed e fazer com que o conteúdo role */
+    width: 100%;  /* Ocupa toda a largura */
+    margin: 0; /* Sem margens */
     background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
     color: #00bcd4;
-    width: 200px;
-}
-
-/* Lado esquerdo */
-#ladoEsquerdo {
-    left: 10px;
-}
-
-/* Lado direito */
-#ladoDireito {
-    right: 10px;
+    padding: 15px;
+    box-shadow: none;
+    text-align: center;
 }
 
 /* Títulos das seções das letras erradas e palavras descobertas */
@@ -169,20 +159,8 @@ button:active {
 
 /* Estilo das letras erradas e palavras descobertas */
 #letrasErradas, #palavrasDescobertas {
-    font-size: 1rem;
-    color: #fff;
-    text-align: center;
-}
-
-/* Estilo do botão de reiniciar */
-button:last-of-type {
-    background-color: #ff4081;
-    margin-top: 20px;
     font-size: 1.2rem;
-}
-
-button:last-of-type:hover {
-    background-color: #ff80ab;
+    color: #fff;
 }
 
 /* Ajuste para a tela responsiva em telas pequenas */
@@ -190,49 +168,30 @@ button:last-of-type:hover {
     .container {
         width: 90%;
         padding: 20px;
-        margin-bottom: 100px; /* Espaço para as seções de baixo */
+        margin-bottom: 100px; /* Garantir que haja espaço para a rolagem */
     }
 
     #entradaLetra input, #palavraCompleta {
         width: 80%;
     }
 
-    /* Remover as seções de Letras Erradas e Palavras Descobertas da posição fixa */
     #ladoEsquerdo, #ladoDireito {
-        position: static;  /* Remover a posição fixa para que fique no fluxo normal da página */
-        width: 100%;  /* Ocupar toda a largura */
-        margin: 0; /* Remover margens */
-        background: rgba(0, 0, 0, 0.6); /* Manter o fundo */
-        color: #00bcd4;
+        width: 100%;
+        margin: 0;
+        background: rgba(0, 0, 0, 0.6);
         padding: 15px;
-        box-shadow: none; /* Remover sombra */
-        text-align: center; /* Centralizar o texto */
+        box-shadow: none;
+        text-align: center;
     }
 
-    /* Ajustar a fonte e o espaçamento nas seções */
-    #ladoEsquerdo h3, #ladoDireito h3 {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-        color: #ff4081;  /* Neon rosa */
-    }
-
-    #letrasErradas, #palavrasDescobertas {
-        font-size: 1.2rem;
-        color: #fff;
-    }
-
-    /* Colocar as seções no rodapé da página */
+    /* Colocar as seções no final da página */
     #ladoEsquerdo {
-        margin-top: 20px; /* Adicionar um pouco de margem no topo */
+        margin-top: 20px;
     }
 
     #ladoDireito {
-        margin-top: 20px; /* Adicionar um pouco de margem no topo */
-    }
-
-    /* Adiciona um espaçamento abaixo para garantir que o conteúdo não fique preso ao fundo */
-    #ladoEsquerdo, #ladoDireito {
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
 }
+
 
