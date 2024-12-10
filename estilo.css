@@ -12,8 +12,8 @@ body {
     color: #fff;
     min-height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Alinha o conteúdo no topo da página */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
     flex-direction: column;
     overflow-y: auto; /* Permite rolar a página verticalmente */
     padding-bottom: 100px; /* Deixa espaço para as seções do rodapé */
@@ -193,5 +193,6 @@ button:active {
         margin-top: 20px;
     }
 }
+
 
 
