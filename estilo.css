@@ -17,6 +17,7 @@ body {
     flex-direction: column;
     overflow-y: auto; /* Permite rolar a página verticalmente */
     padding-bottom: 100px; /* Deixa espaço para as seções do rodapé */
+    width: 100%; /* Garante que a largura ocupe toda a tela */
 }
 
 /* Container principal */
@@ -209,7 +210,6 @@ button:active {
         width: 80%; /* Mantém o conteúdo com uma largura mais flexível */
     }
 }
-
 
 
 
