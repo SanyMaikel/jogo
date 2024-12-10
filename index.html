@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe a Palavra</title>
+    <link rel="icon" href="" type="image/png">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="icon" type="image/png" href="IMAGEM/8541744.png">
+</head>
+<body>
+    <!-- Container principal -->
+    <div class="container">
+        <h1>Adivinhe a Palavra!</h1>
+
+        <!-- Área para mostrar as letras da palavra -->
+        <div id="palavra">
+            <!-- Aqui as letras da palavra serão exibidas -->
+        </div>
+
+        <!-- Tentativas feitas -->
+        <div id="tentativasFeitas">
+            Tentativas feitas: <span>0</span>
+        </div>
+
+        <!-- Área para o jogador digitar a tentativa de uma letra -->
+        <div id="entradaLetra">
+            <label for="letra">Digite uma letra:</label>
+            <input type="text" id="letra" maxlength="1" placeholder="Digite uma letra" />
+        </div>
+
+        <!-- Botão para tentar a letra -->
+        <div>
+            <button onclick="verificarLetra()">Tentar</button>
+        </div>
+
+        <!-- Área para o jogador tentar digitar a palavra completa -->
+        <div id="entradaPalavra">
+            <label for="palavraCompleta">Ou tente adivinhar a palavra completa:</label>
+            <input type="text" id="palavraCompleta" placeholder="Digite a palavra" />
+        </div>
+
+        <!-- Botão para adivinhar a palavra -->
+        <div>
+            <button onclick="verificarPalavraCompleta()">Adivinhar palavra</button>
+        </div>
+
+        <!-- Mensagens de status -->
+        <div id="mensagem">
+            <!-- Aqui será exibido se o jogador ganhou ou perdeu -->
+        </div>
+
+        <!-- Botão para reiniciar o jogo -->
+        <div>
+            <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
+        </div>
+    </div>
+
+    <!-- Lado esquerdo para as letras erradas -->
+    <div id="ladoEsquerdo">
+        <h3>Letras Erradas</h3>
+        <p id="letrasErradas">Nenhuma letra errada ainda.</p>
+    </div>
+
+    <!-- Lado direito para as palavras descobertas -->
+    <div id="ladoDireito">
+        <h3>Palavras Descobertas</h3>
+        <p id="palavrasDescobertas">Nenhuma palavra descoberta ainda.</p>
+    </div>
+
+    <script src="JS/palavra.js"></script>
+    <!-- Adicionar o script para confetes -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
